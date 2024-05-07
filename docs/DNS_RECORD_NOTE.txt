@@ -1,0 +1,29 @@
+# DNS RECORD NOTE
+
+
+IPAM has ip and fqdn(primary?)
+
+DNSMGR set CNAME/HTTPS to existed fqdn.
+
+
+============================= HEAD
+\$TTL $TTL
+@ IN SOA $CONTACTS  ( $SERIAL; $REFRESH_SEC; $RETRY_SEC; $EXPIRE_SEC; $MINIMUM_SEC; )
+============================= HEAD
+
+
+
+
+A Zone/Domain belong to a CIDR Range.
+
+
+Zone Generate Process:
+  1. A zone fetch my head
+  2. A zone fetch blonging CIDR Range --- zone to cidr.
+  3. Loop CIDR
+    -> Search Record.
+
+
+Data Strucuture:
+  - Zone Information.tsv: zonename, current contact, serial,  refresh second, retry second, expire second, minimum second, CIDR
+  - Custom Records.tsv: zonename, records- 

@@ -1,0 +1,8 @@
+#!/bin/bash -eu
+IPAM_SHELL_DIR="$(cd "$(dirname "$0")"/../; pwd)"
+IPAM_SHELL_LIB="$IPAM_SHELL_DIR/lib"
+source "$IPAM_SHELL_LIB/Cli.sh"
+
+: "PREFIX=\"ipam\" SUBCMD_FILE=\"SubCmds.sh\" \$@ =\"$@\""
+CallSubCmd "ipam" "$IPAM_SHELL_LIB/SubCmds.sh" "$@"
+
